@@ -51,11 +51,10 @@ export default function Navbar() {
         duration: reduceMotion ? 0 : 0.7,
         ease: "easeOut",
       }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-mocha/10 bg-cream/90 py-3 shadow-lg shadow-mocha/5 backdrop-blur-xl"
-          : "bg-cream/70 py-5 backdrop-blur-sm"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled
+        ? "border-b border-mocha/10 bg-cream/90 py-3 shadow-lg shadow-mocha/5 backdrop-blur-xl"
+        : "bg-cream/70 py-5 backdrop-blur-sm"
+        }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12 lg:px-20">
 
@@ -85,11 +84,10 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`relative py-2 text-sm transition-colors duration-300 ${
-                active === link.href
-                  ? "font-semibold text-amber"
-                  : "text-mocha hover:text-amber"
-              }`}
+              className={`relative py-2 text-sm transition-colors duration-300 ${active === link.href
+                ? "font-semibold text-amber"
+                : "text-mocha hover:text-amber"
+                }`}
             >
               {link.name}
 
@@ -122,19 +120,16 @@ export default function Navbar() {
           className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-mocha/20 lg:hidden"
         >
           <span
-            className={`h-0.5 w-5 bg-mocha transition-transform duration-300 ${
-              menuOpen ? "translate-y-2 rotate-45" : ""
-            }`}
+            className={`h-0.5 w-5 bg-mocha transition-transform duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-5 bg-mocha transition-opacity duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
+            className={`h-0.5 w-5 bg-mocha transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-5 bg-mocha transition-transform duration-300 ${
-              menuOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
+            className={`h-0.5 w-5 bg-mocha transition-transform duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
           />
         </button>
       </nav>
@@ -156,17 +151,34 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              onClick={closeMenu}
-              className={`rounded-xl px-4 py-3 text-sm transition-colors ${
-                active === link.href
-                  ? "bg-champagne/50 font-semibold text-mocha"
-                  : "text-charcoal hover:bg-white/70"
-              }`}
+              onClick={() => {
+                const target = document.getElementById(link.href.substring(1));
+
+                setMenuOpen(false);
+
+                if (target) {
+                  setActive(link.href);
+
+                  setTimeout(() => {
+                    target.scrollIntoView({
+                      behavior: reduceMotion ? "auto" : "smooth",
+                      block: "start",
+                    });
+
+                    window.history.replaceState(null, "", link.href);
+                  }, 100);
+                } else {
+                  console.error(`Section not found: ${link.href}`);
+                }
+              }}
+              className={`rounded-xl px-4 py-3 text-sm transition-colors ${active === link.href
+                ? "bg-champagne/50 font-semibold text-mocha"
+                : "text-charcoal hover:bg-white/70"
+                }`}
             >
               {link.name}
             </a>
           ))}
-
           <a
             href="#contact"
             onClick={closeMenu}
