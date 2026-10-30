@@ -149,9 +149,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  y: [0, -18, 0],
-                                  rotate: [0, 12, 0],
-                              }
+                                y: [0, -18, 0],
+                                rotate: [0, 12, 0],
+                            }
                     }
                     transition={{
                         duration: 12,
@@ -167,9 +167,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  x: [0, 18, 0],
-                                  y: [0, -22, 0],
-                              }
+                                x: [0, 18, 0],
+                                y: [0, -22, 0],
+                            }
                     }
                     transition={{
                         duration: 8,
@@ -185,9 +185,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  y: [0, 24, 0],
-                                  scale: [1, 1.08, 1],
-                              }
+                                y: [0, 24, 0],
+                                scale: [1, 1.08, 1],
+                            }
                     }
                     transition={{
                         duration: 9,
@@ -203,9 +203,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  x: [0, 24, 0],
-                                  rotate: [0, -15, 0],
-                              }
+                                x: [0, 24, 0],
+                                rotate: [0, -15, 0],
+                            }
                     }
                     transition={{
                         duration: 15,
@@ -226,10 +226,10 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  y: [0, -16, 0],
-                                  rotate: [0, 45, 0],
-                                  opacity: [0.45, 1, 0.45],
-                              }
+                                y: [0, -16, 0],
+                                rotate: [0, 45, 0],
+                                opacity: [0.45, 1, 0.45],
+                            }
                     }
                     transition={{
                         duration: 5,
@@ -246,10 +246,10 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  y: [0, -12, 0],
-                                  rotate: [0, -35, 0],
-                                  opacity: [0.3, 1, 0.3],
-                              }
+                                y: [0, -12, 0],
+                                rotate: [0, -35, 0],
+                                opacity: [0.3, 1, 0.3],
+                            }
                     }
                     transition={{
                         duration: 4,
@@ -266,10 +266,10 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  rotate: [0, 90, 180],
-                                  scale: [0.85, 1.15, 0.85],
-                                  opacity: [0.4, 1, 0.4],
-                              }
+                                rotate: [0, 90, 180],
+                                scale: [0.85, 1.15, 0.85],
+                                opacity: [0.4, 1, 0.4],
+                            }
                     }
                     transition={{
                         duration: 8,
@@ -286,9 +286,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  y: [0, -15, 0],
-                                  opacity: [0.25, 1, 0.25],
-                              }
+                                y: [0, -15, 0],
+                                opacity: [0.25, 1, 0.25],
+                            }
                     }
                     transition={{
                         duration: 5,
@@ -314,18 +314,18 @@ export default function Hero() {
                             reduceMotion
                                 ? {}
                                 : {
-                                      y: [
-                                          0,
-                                          -18 - (index % 3) * 7,
-                                          0,
-                                      ],
-                                      x: [
-                                          0,
-                                          index % 2 === 0 ? 7 : -7,
-                                          0,
-                                      ],
-                                      opacity: [0.15, 0.85, 0.15],
-                                  }
+                                    y: [
+                                        0,
+                                        -18 - (index % 3) * 7,
+                                        0,
+                                    ],
+                                    x: [
+                                        0,
+                                        index % 2 === 0 ? 7 : -7,
+                                        0,
+                                    ],
+                                    opacity: [0.15, 0.85, 0.15],
+                                }
                         }
                         transition={{
                             duration: particle.duration,
@@ -353,11 +353,11 @@ export default function Hero() {
                     reduceMotion
                         ? {}
                         : {
-                              x: [0, -35, 0],
-                              y: [0, 25, 0],
-                              scale: [1, 1.18, 1],
-                              opacity: [0.6, 1, 0.6],
-                          }
+                            x: [0, -35, 0],
+                            y: [0, 25, 0],
+                            scale: [1, 1.18, 1],
+                            opacity: [0.6, 1, 0.6],
+                        }
                 }
                 transition={{
                     duration: 8,
@@ -378,10 +378,10 @@ export default function Hero() {
                     reduceMotion
                         ? {}
                         : {
-                              x: [0, 45, -10, 0],
-                              y: [0, -30, 15, 0],
-                              scale: [1, 1.2, 0.9, 1],
-                          }
+                            x: [0, 45, -10, 0],
+                            y: [0, -30, 15, 0],
+                            scale: [1, 1.2, 0.9, 1],
+                        }
                 }
                 transition={{
                     duration: 13,
@@ -520,9 +520,9 @@ export default function Hero() {
                                 reduceMotion
                                     ? {}
                                     : {
-                                          y: -5,
-                                          backgroundColor: "#F4D9A0",
-                                      }
+                                        y: -5,
+                                        backgroundColor: "#F4D9A0",
+                                    }
                             }
                             whileTap={
                                 reduceMotion ? {} : { scale: 0.97 }
@@ -530,6 +530,15 @@ export default function Hero() {
                             className="rounded-full border border-mocha/30 bg-white/30 px-7 py-4 text-sm font-semibold text-mocha backdrop-blur-sm transition-colors duration-300"
                         >
                             Let's Connect
+                        </motion.a>
+                        <motion.a
+                            href="/resume.pdf"
+                            download="Nidhi_Gupta_Resume.pdf"
+                            whileHover={reduceMotion ? {} : { y: -5, scale: 1.03 }}
+                            whileTap={reduceMotion ? {} : { scale: 0.97 }}
+                            className="rounded-full border border-amber/40 bg-white/40 px-7 py-4 text-sm font-semibold text-mocha backdrop-blur-sm transition-colors duration-300 hover:bg-champagne"
+                        >
+                            Download Resume ↓
                         </motion.a>
                     </motion.div>
 
@@ -667,9 +676,9 @@ export default function Hero() {
                                 reduceMotion
                                     ? {}
                                     : {
-                                          y: [0, -12, 0],
-                                          rotate: [0, -2, 0],
-                                      }
+                                        y: [0, -12, 0],
+                                        rotate: [0, -2, 0],
+                                    }
                             }
                             transition={{
                                 duration: 3.5,
@@ -694,9 +703,9 @@ export default function Hero() {
                                 reduceMotion
                                     ? {}
                                     : {
-                                          rotate: 360,
-                                          scale: [1, 1.2, 1],
-                                      }
+                                        rotate: 360,
+                                        scale: [1, 1.2, 1],
+                                    }
                             }
                             transition={{
                                 rotate: {
@@ -722,9 +731,9 @@ export default function Hero() {
                                 reduceMotion
                                     ? {}
                                     : {
-                                          y: [0, -22, 0],
-                                          x: [0, 10, 0],
-                                      }
+                                        y: [0, -22, 0],
+                                        x: [0, 10, 0],
+                                    }
                             }
                             transition={{
                                 duration: 3,
@@ -756,9 +765,9 @@ export default function Hero() {
                         reduceMotion
                             ? {}
                             : {
-                                  scaleY: [1, 0.35, 1],
-                                  opacity: [1, 0.4, 1],
-                              }
+                                scaleY: [1, 0.35, 1],
+                                opacity: [1, 0.4, 1],
+                            }
                     }
                     transition={{
                         duration: 1.5,
